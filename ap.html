@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <title>ARUNACHAL PRADESH</title>
+  <link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+
+  <h1>ARUNACHAL PRADESH</h1>
+  <br>
+  <br>
+
+  <center>
+    <div class="img-slider" style="background-color: black;">
+      <div class="slide active">
+        <img
+          src="https://c.ndtvimg.com/2021-06/9jubsjh_arunachal-pradeshgenericunsplash_625x300_11_June_21.jpg"
+          style="border:solid 10px yellow; border-radius: 5px;" alt="">
+        <div class="info">
+          <!-- <h2>Slide 01</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdSHApjrV71xlXmXSmyqQnAW1KL4i2ck5seQ&usqp=CAU" alt=""
+          style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+        <div class="info">
+
+        </div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScZ3J2HKwHFB2_dR0dZ4yCZugGK2uaT96CKQ&usqp=CAU"
+          alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+        <div class="info">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="navigation">
+      <div class="btn active"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+    </div>
+    </div>
+  </center>
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function (manual) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function () {
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == i) {
+            i = 0;
+          }
+          if (i >= slides.length) {
+            return;
+          }
+          repeater();
+        }, 5000);
+      }
+      repeater();
+    }
+    repeat();
+  </script>
+  <br>
+  <br>
+  <hr>
+  <hr>
+  <br>
+  <div class="box1">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About ARUNACHAL PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      It was formed from the erstwhile North-East Frontier Agency (NEFA) region, and became a state on 20 February 1987. It borders the states of Assam and Nagaland to the south. It shares international borders with Bhutan in the west, Myanmar in the east, and a disputed border with China in the north at the McMahon Line. Itanagar is the state capital of Arunachal Pradesh. Arunachal Pradesh is the largest of the Seven Sister States of Northeast India by area. Arunachal Pradesh shares a 1,129 km border with China's Tibet Autonomous Region.[15][16]
+
+      As of the 2011 Census of India, Arunachal Pradesh has a population of 1,382,611 and an area of 83,743 square kilometres (32,333 sq mi).
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Tawang_Monastery_%28Tibetan_Buddhist%29.jpg/1280px-Tawang_Monastery_%28Tibetan_Buddhist%29.jpg"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box2">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+      ARUNACHAL PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Arunachal Pradesh is located between 26.28° N and 29.30° N latitude and 91.20° E and 97.30° E longitude and has an area of 83,743 km2 (32,333 sq mi).
+
+      The highest peak in the state is Kangto, at 7,060 metres (23,160 ft). Nyegi Kangsang, the main Gorichen peak, and the Eastern Gorichen peak are other tall Himalaya peaks. The state's mountain ranges, in the extreme East of India, are described as "the place where the sun rises" in historical Indian texts and named the Aruna Mountains, which inspired the name of the state. The villages of Dong (more accessible by car, and with a lookout favoured by tourists) and Vijaynagar (on the edge of Myanmar) receive the first sunlight in all of India.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Mountains_of_Arunachal_Pradesh.jpg" alt="" width="800px"
+          height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box3">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+      ARUNACHAL PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Itanagar Airport, a Greenfield project serving Itanagar is being constructed at Holongi at a cost of ₹6.5 billion.[79] Alliance Air operates the only scheduled flights to the state flying from Kolkata via Guwahati to Pasighat Airport. This route commenced in May 2018 under the Government's Regional Connectivity Scheme UDAN following the completion of a passenger terminal at Pasighat Airport in 2017.[80] State-owned Daporijo Airport, Ziro Airport, Along Airport, and Tezu Airport are small and not in operation, but the government has proposed to develop them.[81] Before the state was connected by roads, these airstrips were used to distribute food.
+
+      
+      
+      The road from Tinsukia to Parshuram Kund
+      
+      Hunli Signboard
+      The main highway of Arunachal Pradesh is the Trans-Arunachal Highway, National Highway 13 (1,293 km (803 mi); formerly NH-229 and NH-52). It originates in Tawang and spans most of the width of Arunachal Pradesh, then crosses south into Assam and ends at Wakro. The project was announced by then Prime Minister Manmohan Singh in 2008 for completion by 2015–16, but is not yet completed.
+
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/69/Parsuram.jpg" alt=""
+          width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box4">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in ARUNACHAL PRADESH
+    </h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Arunachal finds mention in the literature of Kalika Purana and Mahabharata. This place is supposed to be the Prabhu Mountains of the Puranas. It was here that sage Parashuram washed away his sin, sage Vyasa meditated, King Bhishmaka founded his kingdom and Lord Krishna married his consort Rukmini.
+
+      The Land of Rising Sun – Arunachal Pradesh
+      
+      The widely scattered archaeological remains at different places in Arunachal bears testimony to its rich cultural heritage. Arunachal Pradesh, a serene land tucked into the North Eastern tip of India, invites you to relax in its picturesque hills and valleys, enjoy its salubrious climate and meet its simple and hospitable people, with their glorious heritage of arts and crafts and colorful festivals that reflect their ancient faith in the inexorable power of nature.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="http://tourismbreakingnews.com/wp-content/uploads/2020/11/Arunachal-Pradesh.jpeg" ; alt="" width="800px"
+          height="600px">
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

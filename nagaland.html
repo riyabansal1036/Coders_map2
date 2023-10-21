@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Nagaland</title>
+    <link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+    <h1>NAGALAND</h1>
+    <br>
+    <br>
+    <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://media.easemytrip.com/media/Blog/India/636927396474187392/636927396474187392ozkrTH.jpg"
+                    class="d-block w-100" alt="..." height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://cdn.britannica.com/73/156473-050-E0E9F844/Vidah-Sauda-state-legislature-building-Karnataka-Bengaluru.jpg"
+                    class="d-block w-100" alt="..." width="100vw" height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://static2.tripoto.com/media/filter/tst/img/1690554/TripDocument/1580819939_karnataka.png"
+                    class="d-block w-100" alt="..." width="100vw" height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+<center>
+    <div class="img-slider" style="background-color: black;">
+        <div class="slide active">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Way_o_Kohima%2CNagaland_India.jpg/420px-Way_o_Kohima%2CNagaland_India.jpg" style="border:solid 10px yellow; border-radius: 5px;"
+           alt="">
+          <div class="info">
+            <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+          </div>
+        </div>
+        <div class="slide">
+          <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Kapamodzu.jpg/420px-Kapamodzu.jpg" alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+          <div class="info">
+            
+          </div>
+        </div>
+         <div class="slide">
+          <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Kohima_Cemetery.jpeg/330px-Kohima_Cemetery.jpeg " alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+          <div class="info">
+           
+          </div>
+        </div><!--
+        <div class="slide">
+          <img src="4.jpg" alt="">
+          <div class="info">
+            <h2>Slide 04</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="5.jpg" alt="">
+          <div class="info">
+            <h2>Slide 05</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div> -->
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+    </center>
+      <script type="text/javascript">
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+  
+      // Javascript for image slider manual navigation
+      var manualNav = function(manual){
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+  
+          btns.forEach((btn) => {
+            btn.classList.remove('active');
+          });
+        });
+  
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          manualNav(i);
+          currentSlide = i;
+        });
+      });
+  
+      // Javascript for image slider autoplay navigation
+      var repeat = function(activeClass){
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+  
+        var repeater = () => {
+          setTimeout(function(){
+            [...active].forEach((activeSlide) => {
+              activeSlide.classList.remove('active');
+            });
+  
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+  
+          if(slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 5000);
+        }
+        repeater();
+      }
+      repeat();
+      </script>
+   <br>
+   <br>
+    <hr>
+    <hr>
+    <br>
+    <div class="box1">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About Nagaland</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Nagaland /ˈnɑːɡəlænd/ is a state in northeastern India. It is bordered by the state of Arunachal Pradesh to the north, Assam to the west, Manipur to the south and the Sagaing Region of Myanmar to the east. Its capital city is Kohima and its largest city is Dimapur. It has an area of 16,579 square kilometres (6,401 sq mi) with a population of 1,980,602 per the 2011 Census of India, making it one of India's smallest states.[8]
+
+            Nagaland became the 16th state of India on 1 December 1963. It has experienced insurgency and inter-ethnic conflict since the 1950s, limiting its economic development.[9][10]
+            
+            Agriculture is its most important economic activity, accounting for over 70% of its economy. Other significant activities include forestry, tourism, insurance, real estate, and miscellaneous cottage industries.
+            
+            It lies between the parallels of 98 and 96 degrees east longitude and 26.6 and 27.4 degrees latitude north. It is home to a rich variety of flora and fauna.The ancient history of the Nagas is unclear. Tribes migrated at different times, each settling in the northeastern part of present India and establishing their respective sovereign mountain terrains and village-states. There are no records of whether they came from the northern Mongolian region, southeast Asia or southwest China, except that their origins are from the east of India and that historical records show the present-day Naga people settled before the arrival of the Ahoms in 1228 CE.
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="data:image/jpeg;base64,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"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box2">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+            Nagaland</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            
+            Nagaland is largely a mountainous state. The Naga Hills rise from the Brahmaputra Valley in Assam to about 610 metres (2,000 ft) and rise further to the southeast, as high as 1,800 metres (6,000 ft). Mount Saramati at an elevation of 3,841 metres (12,602 ft) is the state's highest peak; this is where the Naga Hills merge with the Patkai Range in which form the boundary with Burma. Rivers such as the Doyang and Diphu to the north, the Barak river in the southwest, dissect the entire state. 20 percent of the total land area of the state is covered with wooded forest, a haven for flora and fauna. The evergreen tropical and subtropical forests are found in strategic pockets in the state.[36]
+
+Climate
+Nagaland has a largely monsoon climate with high humidity levels. Annual rainfall averages around 1,800–2,500 millimetres (70–100 in), concentrated in the months of May to September. Temperatures range from 21 to 40 °C (70 to 104 °F). In winter, temperatures do not generally drop below 4 °C (39 °F), but frost is common at high elevations. Summer is the shortest season in the state, lasting for only a few months. The temperature during the summer season remains between 16 to 31 °C (61 to 88 °F). Winter often arrives early, with bitter cold and dry weather striking certain regions of the state. The maximum average temperature recorded in the winter season is 24 °C (75 °F). Strong northwest winds blow across the state during the months of February and March.
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src=" https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Forest_around_Pangti_Village_and_Doyang_Dam_region_Nagaland_JEG4768.JPG/1050px-Forest_around_Pangti_Village_and_Doyang_Dam_region_Nagaland_JEG4768.JPG"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box3">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+            Nagaland</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            
+            Nagaland's rugged and mountainous landscape presents a major challenge to the infrastructural development of transport. Roads are the backbone of Nagaland's transportation network. The state has over 15,000 km of surfaced roads, but these are not satisfactorily maintained given the weather damage. Yet, in terms of population served for each kilometre of surfaced road, Nagaland is the second best state in the region after Arunachal Pradesh.Dimapur Airport, is the sole airport in Nagaland with scheduled commercial services to Kolkata, West Bengal, Guwahati, Assam, Imphal, Manipur[89] and Dibrugarh, Assam. It is located 7 kilometres (4.3 mi) from Dimapur, and 70 kilometres (43 mi) from Kohima. The airport's asphalt runway is 7513 feet long, at an elevation of 487 feet.[90] Alongside Dimapur Airport another airport is planned.Nagaland was first connected to the railway line in 1903 when the 1,000 mm (3 ft 3 3⁄8 in) wide metre-gauge railway track earlier laid by Assam Bengal Railway from Chittagong to Lumding was extended to Tinsukia on the Dibru–Sadiya line.
+
+            The railway network in the state is minimal with the Dimapur railway station on the Lumding–Dibrugarh rail section as the only railway station in Nagaland. Broad-gauge lines run 12.84 kilometres (7.98 mi), National Highway roads 365.3 kilometres (227.0 mi), and state roads 1,094.5 kilometres (680.1 mi).
+
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Dimapur_airport.jpg/330px-Dimapur_airport.jpg" alt=""
+                    width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box4">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in Nagaland
+        </h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Nagaland offers unending exploration possibilities from heritage villages to wildlife sanctuaries. Beautifully nestled amidst the lush and verdant sub-tropical and sub-alpine climate, Nagaland treasures an overabundance of wild flora and fauna and even some medicinal plants. Nagaland is a beautiful destination in India and it stores some popular places to visit. You can soak in the freshness of fine scent in the air, the calming yet buzzing sound of wild cicadas and beautiful rolling ranch lands and white fluffy clouds hovering above.
+            This must visit destination 'Nagaland' is a wonderful world full of beauty, appeal and adventure that calls tourists from far and near. As for some, the only drawback is the accessibility which is an important factor and perhaps the only reason why this seems to be a dream-like destination. But truth be told, the roads are quite convenient, from smoothly linked highways via Assam and West Bengal, Nagaland, in fact, the entire Northeast in easily accessible. Travellers venture into the Naga Hills to experience Nagaland tour with exquisiteness and to have unforgettable memories of the landscape, people, food, and culture. Even the rich deep forest looks blue because of the reflection of the bright sky with meandering clouds hovering around. Nature could not have been any sweeter to Nagaland for endowing it with everything beautiful and awe-inspiring.
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Mysore_palace_illuminated.jpg/1920px-Mysore_palace_illuminated.jpg"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+

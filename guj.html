@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <title>GUJARAT</title>
+  <link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+  <h1>GUJARAT</h1>
+  <br>
+  <br>
+
+  <center>
+    <div class="img-slider" style="background-color: black;">
+      <div class="slide active">
+        <img src="https://static.toiimg.com/photo/70958939.cms" style="border:solid 10px yellow; border-radius: 5px;"
+          alt="">
+        <div class="info">
+          <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://images.news18.com/ibnlive/uploads/2021/05/1619842128_pjimage-2021-05-01t091611.216.jpg?impolicy=website&width=510&height=356"
+          alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+        <div class="info">
+
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiD_ZFXZpFzqfEQUBCrFdUuvMmSKh424mUjQ&usqp=CAU"
+          alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+        <div class="info">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="navigation">
+      <div class="btn active"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+    </div>
+    </div>
+  </center>
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function (manual) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function () {
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == i) {
+            i = 0;
+          }
+          if (i >= slides.length) {
+            return;
+          }
+          repeater();
+        }, 5000);
+      }
+      repeater();
+    }
+    repeat();
+  </script>
+  <br>
+  <br>
+  <hr>
+  <hr>
+  <br>
+  <div class="box1">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About GUJARAT</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Gujarat is bordered by Rajasthan to the northeast, Dadra and Nagar Haveli and Daman and Diu to the south,
+      Maharashtra to the southeast, Madhya Pradesh to the east, and the Arabian Sea and the Pakistani province of Sindh
+      to the west. Its capital city is Gandhinagar, while its largest city is Ahmedabad.[9] The Gujarati people of India
+      are indigenous to the state, and their language Gujarati, is the state's official language. The economy of Gujarat
+      is the fifth-largest in India, with a gross state domestic product (GSDP) of ₹18.5 trillion (US$260 billion) and
+      has the country's 11th-highest GSDP per capita of ₹216,000 (US$3,000).[1] Gujarat ranks 21st among Indian states
+      in human development index.[4] The state traditionally has low unemployment and is widely considered one of the
+      most industrially developed states of India and a manufacturing hub.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/2/21/GujaratPhotoMontage.jpg" alt="" width="800px"
+          height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box2">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+      RAJASTHAN</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Gujarat borders the Tharparkar, Badin and Thatta districts of Pakistan's Sindh province to the northwest, is
+      bounded by the Arabian Sea to the southwest, the state of Rajasthan to the northeast, Madhya Pradesh to the east,
+      and by Maharashtra, the Union Territory of Dadra and Nagar Haveli and Daman and Diu to the south. Historically,
+      the north was known as Anarta, the Kathiawar peninsula, "Saurastra", and the south as "Lata".[107] Gujarat was
+      also known as Pratichya and Varuna.[108] The Arabian Sea makes up the state's western coast. The capital,
+      Gandhinagar is a planned city. Gujarat has an area of 75,686 sq mi (196,030 km2) with the longest coastline (24%
+      of Indian sea coast) 1,600 kilometres (990 mi), dotted with 41 ports: one major, 11 intermediate and 29 minor.
+
+      The Narmada is the largest river in Gujarat followed by the Tapi. The Sabarmati has the longest course through the
+      state. The Sardar Sarovar Project is built on Narmada, one of the major rivers of peninsular India where it is one
+      of only three major rivers that run from east to west – the others being the Tapi and the Mahi.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/India_Gujarat_physical.svg/1024px-India_Gujarat_physical.svg.png"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box3">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+      GUJARAT</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      There are two international airports (Ahmedabad and Surat), nine domestic airports (Bhavnagar, Bhuj, Jamnagar,
+      Kandla, Porbandar, Rajkot, Vadodara, Amreli, Keshod), two private airports (Mundra, Mithapur) and three military
+      bases (Bhuj, Jamnagar, Naliya) in Gujarat. Two more airports (Ankleshwar, Rajkot) are under construction. There
+      are three disused airports situated at Deesa, Mandvi and Mehsana; the last serving as a flying school. Gujarat
+      State Aviation Infrastructure Company Limited (GUJSAIL) has been established by the Government of Gujarat to
+      foster development of aviation infrastructure in the state.[208]
+
+      These airports are operated and owned by either the Airports Authority of India, Indian Air Force, Government of
+      Gujarat or private companies
+
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Ahmedabad_Airport_Terminal_2.jpg" alt=""
+          width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box4">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in GUJARAT
+    </h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Gujarat has a variety of museums on different genres that are run by the state's Department of Museums located at
+      the principal state museum, Baroda Museum & Picture Gallery in Vadodara,[196] which is also the location of the
+      Maharaja Fateh Singh Museum. The Kirti Mandir, Porbandar, Sabarmati Ashram, and Kaba Gandhi No Delo are museums
+      related to Mahatma Gandhi, the former being the place of his birth and the latter two where he lived in his
+      lifetime. Kaba Gandhi No Delo in Rajkot exhibits part of a rare collection of photographs relating to the life of
+      Mahatma Gandhi. Sabarmati Ashram is the place where Gandhi initiated the Dandi March. On 12 March 1930 he vowed
+      that he would not return to the Ashram until India won independence.[197]
+
+      The Maharaja Fateh Singh Museum is housed within Lakshmi Vilas Palace, the residence of the erstwhile Maharajas,
+      located in Vadodara.
+
+      The Calico Museum of Textiles is managed by the Sarabhai Foundation and is one of the most popular tourist spots
+      in Ahmedabad.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Vadnagar_Torana.JPG" ; alt="" width="800px"
+          height="600px">
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

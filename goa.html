@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>GOA</title>
+    <link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+
+    <h1>GOA</h1>
+    <br>
+    <br>
+
+    <center>
+        <div class="img-slider" style="background-color: black;">
+            <div class="slide active">
+                <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/09/27/871143-goa-tourism-092719.jpg"
+                    style="border:solid 10px yellow; border-radius: 5px;" alt="">
+                <div class="info">
+                    <!-- <h2>Slide 01</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://static.toiimg.com/photo/80110361/80110361.jpg?v=3" alt=""
+                    style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+                <div class="info">
+
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqAK8sauU6dYjpQuWuTvS2GrMuWNY4vC20KQ&usqp=CAU"
+                    alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+                <div class="info">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+        </div>
+    </center>
+    <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        // Javascript for image slider manual navigation
+        var manualNav = function (manual) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+
+                btns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+            });
+
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+
+        // Javascript for image slider autoplay navigation
+        var repeat = function (activeClass) {
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function () {
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    });
+
+                    slides[i].classList.add('active');
+                    btns[i].classList.add('active');
+                    i++;
+
+                    if (slides.length == i) {
+                        i = 0;
+                    }
+                    if (i >= slides.length) {
+                        return;
+                    }
+                    repeater();
+                }, 5000);
+            }
+            repeater();
+        }
+        repeat();
+    </script>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <div class="box1">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About GOA</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Goa is a state on the southwestern coast of India within the region known as the Konkan, and geographically
+            separated from the Deccan highlands by the Western Ghats.[8][9] It is surrounded by the Indian states of
+            Maharashtra to the north and Karnataka to the east and south, with the Arabian Sea forming its western
+            coast. It is India's smallest state by area and its fourth-smallest by population. Goa has the highest GDP
+            per capita among all Indian states,[3][10] two and a half times as high as the GDP per capita of the country
+            as a whole. The Eleventh Finance Commission of India named Goa the best-placed state because of its
+            infrastructure, and India’s National Commission on Population rated it as having the best quality of life in
+            India (based on the commission’s “12 Indicators”).It is the third-highest ranking among Indian states in
+            human development index.
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/56/Shantadurga_temple.jpg" alt=""
+                    width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box2">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+            GOA</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Goa encompasses an area of 3,702 km2 (1,429 sq mi). It lies between the latitudes 14°53′54″ N and 15°40′00″
+            N and longitudes 73°40′33″ E and 74°20′13″ E.
+
+            Goa is a part of the coastal country known as the Konkan, which is an escarpment rising up to the Western
+            Ghats range of mountains, which separate it from the Deccan Plateau. The highest point is the Sonsogor, with
+            an altitude of 1,167 metres (3,829 ft). Goa has a coastline of 160 km (99 mi).
+
+            Goa's seven major rivers are the Zuari, Mandovi, Terekhol, Chapora, Galgibag, Kumbarjua canal, Talpona and
+            the Sal.[34] The Zuari and the Mandovi are the most important rivers, interspaced by the Kumbarjua canal,
+            forming a major estuarine complex.[34] These rivers are fed by the Southwest monsoon rain and their basin
+            covers 69% of the state's geographical area.[34] These rivers are some of the busiest in India. Goa has more
+            than 40 estuarine, eight marine, and about 90 riverine islands. The total navigable length of Goa's rivers
+            is 253 km (157 mi).
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Picture_of_GOA_taken_from_an_air_craft%27s_window.jpg/800px-Picture_of_GOA_taken_from_an_air_craft%27s_window.jpg"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box3">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+            GOA</h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Air
+
+            Goa International Airport, new terminal building
+            Goa International Airport, is a civil enclave at INS Hansa, a Naval airfield located at Dabolim near Vasco
+            da Gama. The airport caters to scheduled domestic and international air services. Goa has scheduled
+            international connections to Doha, Dubai, Muscat, Sharjah and Kuwait in the Middle East by airlines like Air
+            Arabia, Air India, GoAir, Indigo, Oman Air, SpiceJet and Qatar Airways. Though night operations were not
+            permitted till recently, the military now allows civil airlines to fly during the night. A greenfield
+            airport is under construction at Mopa in Pernem taluka.[112] It is expected to be completed by 2022.Goa's
+            public transport largely consists of privately operated buses linking the major towns to rural areas.
+            Government-run buses, maintained by the Kadamba Transport Corporation, link major routes (like the
+            Panaji–Margao route) and some remote parts of the state. The Corporation owns 15 bus stands, 4 depots and
+            one Central workshop at Porvorim and a Head Office at Porvorim
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/1/12/Kadamba_Tata_Marcopolo_Starbus_Ultra_Ac_Deluxe.jpg"
+                    alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <br>
+    <div class="box4">
+        <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in GOA
+        </h2>
+        <div class="content"
+            style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+            Tourism is generally focused on the coastal areas of Goa, with lower tourist activity inland. In 2010, there
+            were more than 2 million tourists reported to have visited Goa, about 1.2 million of whom were from
+            abroad.[66] As of 2013, Goa was a destination of choice for Indian and foreign tourists, particularly
+            Britons and Russians, with limited means who wanted to party. The state was hopeful that changes could be
+            made which would attract a more upscale demographic.[67]
+
+            Goa stands 6th in the Top 10 Nightlife cities in the world in National Geographic Travel.[68] Notable
+            nightclubs in Goa include Chronicle, Mambos and Sinq.
+
+            One of the biggest tourist attractions in Goa is water sports. Beaches like Baga and Calangute offer
+            jet-skiing, parasailing, banana boat rides, water scooter rides, and more. Patnem beach in Palolem stood
+            third in CNN Travel's Top 20 Beaches in Asia
+            <br><br>
+            <div class="content1">
+                <img style="border: solid 3px yellow; border-radius: 10px;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sunset_at_bogamalo_beach.jpg/1280px-Sunset_at_bogamalo_beach.jpg"
+                    ; alt="" width="800px" height="600px">
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+[11:47 PM, 9/26/2021] Riya Bansal KIET: <!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <title>HIMACHAL PRADESH</title>
+  <link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+  <h1>HIMACHAL PRADESH</h1>
+  <br>
+  <br>
+  <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://media.easemytrip.com/media/Blog/India/636927396474187392/636927396474187392ozkrTH.jpg"
+                    class="d-block w-100" alt="..." height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://cdn.britannica.com/73/156473-050-E0E9F844/Vidah-Sauda-state-legislature-building-Karnataka-Bengaluru.jpg"
+                    class="d-block w-100" alt="..." width="100vw" height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://static2.tripoto.com/media/filter/tst/img/1690554/TripDocument/1580819939_karnataka.png"
+                    class="d-block w-100" alt="..." width="100vw" height="500px">
+                <div class="carousel-caption d-none d-md-block">
+                    
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+  <center>
+    <div class="img-slider" style="background-color: black;">
+      <div class="slide active">
+        <img
+          src="https://lp-cms-production.imgix.net/2019-06/GettyImages-149353949_high.jpg?auto=format&fit=crop&ixlib=react-8.6.4&h=520&w=1312"
+          style="border:solid 10px yellow; border-radius: 5px;" alt="">
+        <div class="info">
+          <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/12/30/Pictures/_9ce191ac-4a66-11eb-8e4d-bc3cfcdacc28.jpg"
+          alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+        <div class="info">
+
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaZTazUtlEOT7q60L-Folv6m7VL2TmHEiZnQ&usqp=CAU"
+          alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+        <div class="info">
+
+        </div>
+      </div>
+      <!--
+        <div class="slide">
+          <img src="4.jpg" alt="">
+          <div class="info">
+            <h2>Slide 04</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="5.jpg" alt="">
+          <div class="info">
+            <h2>Slide 05</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div> -->
+    </div>
+    <div class="navigation">
+      <div class="btn active"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+    </div>
+    </div>
+  </center>
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function (manual) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function () {
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == i) {
+            i = 0;
+          }
+          if (i >= slides.length) {
+            return;
+          }
+          repeater();
+        }, 5000);
+      }
+      repeater();
+    }
+    repeat();
+  </script>
+  <br>
+  <br>
+  <hr>
+  <hr>
+  <br>
+  <div class="box1">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About HIMACHAL PRADESH
+    </h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Himachal Pradesh is a northern Indian state in the Himalayas. It's home to scenic mountain towns and resorts such
+      as Dalhousie. Host to the Dalai Lama, Himachal Pradesh has a strong Tibetan presence. This is reflected in its
+      Buddhist temples and monasteries, as well as its vibrant Tibetan New Year celebrations. The region is also well
+      known for its trekking, climbing and skiing areas.The predominantly mountainous region comprising the present-day
+      Himachal Pradesh has been inhabited since pre-historic times having witnessed multiple waves of human migrations
+      from other areas.[22] Through its history, the region was mostly ruled by local kingdoms some of which accepted
+      the suzerainty of larger empires. Prior to India's independence from the British, Himachal comprised the hilly
+      regions of Punjab Province of British India. After independence, many of the hilly territories were organized as
+      the Chief Commissioner's province of Himachal Pradesh which later became a union territory. In 1966, hilly areas
+      of neighboring Punjab state were merged into Himachal and it was ultimately granted full statehood in 1971.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Shimla_India_Ridge.JPG" alt="" width="800px"
+          height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box2">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+      HIMACHAL PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Himachal is in the western Himalayas situated between 30°22′N and 33°12′N latitude and 75°47′E ́ and 79°04′E
+      longitude. Covering an area of 55,673 square kilometres (21,495 sq mi),[8] it is a mountainous state. Most of the
+      state lies on the foothills of the Dhauladhar Range. At 6,816 m, Reo Purgyil is the highest mountain peak in the
+      state of Himachal Pradesh.
+
+      The drainage system of Himachal is composed both of rivers and glaciers. Himalayan rivers criss-cross the entire
+      mountain chain. Himachal Pradesh provides water to both the Indus and Ganges basins.[30] The drainage systems of
+      the region are the Chandra Bhaga or the Chenab, the Ravi, the Beas, the Sutlej, and the Yamuna. These rivers are
+      perennial and are fed by snow and rainfall. They are protected by an extensive cover of natural vegetation.[30]
+      Four of the five Punjab rivers flow through the state, three of them originating here.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Dhauladhars_Eagles.JPG/1280px-Dhauladhars_Eagles.JPG"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box3">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+      HIMACHAL PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Air
+      Himachal has three Domestic Airports in Kangra, Kullu and Shimla districts.[89] The air routes connect the state
+      with Delhi and Chandigarh.
+
+      Bhuntar Airport is in Kullu district, around 10 kilometres (6 mi) from district headquarters.
+      Gaggal Airport is in Kangra district, around 15 kilometres (9 mi) from district headquarters at Dharamshala, which
+      is around 10 kilometres from Kangra
+      Shimla Airport is around 21 kilometres (13 mi) west of the city.
+      Railways
+
+      Kalka-Shimla Railway
+      Broad-gauge lines
+      The only broad-gauge railway line in the whole state connects Amb Andaura–Una Himachal railway station to Nangal
+      Dam in Punjab and runs all the way to Daulatpur, Himachal Pradesh.[90] It is an electrified track since 1999.
+
+      Future constructions:
+
+      Una Himachal–Hamirpur rail project via Dhundla
+      Bhanupali (Punjab)–Bilaspur, Himachal Pradesh
+      Chandigarh–Baddi
+
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kangra_airport_1.jpg/1280px-Kangra_airport_1.jpg"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box4">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in HIMACHAL
+      PRADESH
+    </h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Tourism in Himachal Pradesh is a major contributor to the state's economy and growth. The Himalayas attracts
+      tourists from all over the world. Hill stations like Shimla, Manali, Dharamshala, Dalhousie, Chamba, Khajjiar,
+      Kullu and Kasauli are popular destinations for both domestic and foreign tourists.[80] The state also has many
+      important Hindu pilgrimage sites with prominent temples like Shri Chamunda Devi Mandir, Naina Devi Temple,
+      Bajreshwari Mata Temple, Jwala Ji Temple, Chintpurni, Baijnath Temple, Bhimakali Temple, Bijli Mahadev and Jakhoo
+      Temple.[81] Manimahesh Lake situated in the Bharmour region of Chamba district is the venue of an annual Hindu
+      pilgrimage trek held in the month of August which attracts lakhs of devotees.[82] The state is also referred to as
+      "Dev Bhoomi" (literally meaning Abode of Gods) due to its mention as such in ancient Hindu texts and occurrence of
+      a large number of historical temples in the state.[83]
+
+
+      Khirganga is one of the most popular treks in Himachal.
+      Himachal is also known for its adventure tourism activities like ice skating in Shimla, paragliding in Bir Billing
+      and Solang valley, rafting in Kullu, skiing in Manali, boating in Bilaspur and trekking, horse riding and fishing
+      in different parts in the state.[84] Shimla, the state's capital, is home to Asia's only natural ice-skating
+      rink.[85] Spiti Valley in Lahaul and Spiti District situated at an altitude of over 3000 metres with its
+      picturesque landscapes is an important destination for adventure seekers. The region also has some of the oldest
+      Buddhist Monasteries in the world
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/BirL030-.jpg/1280px-BirL030-.jpg" alt=""
+          width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+[11:47 PM, 9/26/2021] Riya Bansal KIET: HIMACHAL PRADESH
+[11:47 PM, 9/26/2021] Riya Bansal KIET: <!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <title>MADHYA PRADESH</title>
+  <link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+  <h1>MADHYA PRADESH</h1>
+  <br>
+  <br>
+
+  <center>
+    <div class="img-slider" style="background-color: black;">
+      <div class="slide active">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFlMzjWjLyq5ZOAymrI39SY71gqe_JKxfaJ9IXT_heULd5vIP2CLBQ8raRhmaVZznqfEM&usqp=CAU"
+          style="border:solid 10px yellow; border-radius: 5px;" alt="">
+        <div class="info">
+          <!-- <h2>Slide 01</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKYvFZu34WxLezfGdSrJWau40NmuSRnmPThw&usqp=CAU"
+          alt="" style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+        <div class="info">
+
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdhdnWXSbiv68gFkp7Vm_iV8Vvd76-9j9kwA&usqp=CAU"
+          alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+        <div class="info">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="navigation">
+      <div class="btn active"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+    </div>
+    </div>
+  </center>
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function (manual) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function () {
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == i) {
+            i = 0;
+          }
+          if (i >= slides.length) {
+            return;
+          }
+          repeater();
+        }, 5000);
+      }
+      repeater();
+    }
+    repeat();
+  </script>
+  <br>
+  <br>
+  <hr>
+  <hr>
+  <br>
+  <div class="box1">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About MADHYA PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Its capital is Bhopal, and the largest city is Indore, with Jabalpur, Gwalior, Ujjain, Satna being the other major
+      cities. Madhya Pradesh is the second largest Indian state by area and the fifth largest state by population with
+      over 72 million residents. It borders the states of Uttar Pradesh to the northeast, Chhattisgarh to the southeast,
+      Maharashtra to the south, Gujarat to the west, and Rajasthan to the northwest.[11]
+
+      The area covered by the present-day Madhya Pradesh includes the area of the ancient Avanti Mahajanapada, whose
+      capital Ujjain (also known as Avantika) arose as a major city during the second wave of Indian urbanisation in the
+      sixth century BCE. Subsequently, the region was ruled by the major dynasties of India. The Maratha empire
+      dominated the majority of the 18th century. After the Anglo Maratha Wars 19th century, the region was divided into
+      several princely states under the British and incorporated into Central Provinces and Berar and the Central India
+      Agency. After India's independence, Madhya Pradesh state was created with Nagpur as its capital: this state
+      included the southern parts of the present-day Madhya Pradesh and northeastern portion of today's Maharashtra. I
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Temples_kundalpur.JPG/1280px-Temples_kundalpur.JPG"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box2">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+      RAMADHYA PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Madhya Pradesh literally means "Central Province", and is located in the geographic heart of India in between the
+      latitude of 21.6°N–26.30°N and longitude of 74°9'E–82°48'E. The state straddles the Narmada River, which runs east
+      and west between the Vindhya and Satpura ranges; these ranges and the Narmada are the traditional boundaries
+      between the north and south of India. The highest point in Madhya Pradesh is Dhupgarh, with an elevation of 1,350
+      m (4,429 ft).[26]
+
+      The state is bordered on the west by Gujarat, on the northwest by Rajasthan, on the northeast by Uttar Pradesh, on
+      the east by Chhattisgarh, and on the south by Maharashtra.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/India_Madhya_Pradesh_physical.svg/1280px-India_Madhya_Pradesh_physical.svg.png"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box3">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+      MADHYA PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Bus and train services cover most of Madhya Pradesh. The 99,043-kilometre-long (61,542 mi) road network of the
+      state includes 20 national highways.[53] A 4,948-kilometre-long (3,075 mi) rail network criss-crosses the state,
+      with Jabalpur serving as headquarters for the West Central Railway Zone of the Indian Railways. The Central
+      Railway and the Western Railway also cover parts of the state. Most of the western Madhya Pradesh comes under
+      Ratlam Rail Division of Western Railways, including cities like Indore, Ujjain, Mandsaur, Khandwa, Neemuch and
+      Bairagarh in Bhopal. The state has a total of 20 major railway junctions. The major inter-state bus terminals are
+      located in Bhopal, Indore, Gwalior and Jabalpur. More than 2,000 buses are conducted daily from these four cities.
+      The intra-city transit systems mostly consist of buses, private autos and taxis. More than 455 trains transit
+      through Madhya Pradesh daily. 220 trains transit through the State’s capital Bhopal alone. North–South & East–West
+      corridors cut across Madhya Pradesh. There is convenient access to major ports such as Kandla port and Jawaharlal
+      Nehru port in the state[58]
+
+      The state does not have a coastline. Most of the sea trade happens through the Kandla and Jawaharlal Nehru Port
+      (Nhava Sheva) in the neighbouring states, which are well-connected to MP by road and rail networks.
+
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Vehicle_Factory_Jabalpur_%28VFJ%29%27s_Matang_Truck_for_the_Indian_Army.jpg/1280px-Vehicle_Factory_Jabalpur_%28VFJ%29%27s_Matang_Truck_for_the_Indian_Army.jpg"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box4">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in MADHYA
+      PRADESH
+    </h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      The natural environment of Madhya Pradesh is varied.[citation needed] Consisting largely of a plateau streaked
+      with the mountain ranges of the Vindhyas and the Satpuras, the hills give rise to the main river system - Narmada
+      and the Tapti, running from east to west, and the Chambal, Sone, Betwa, Mahanadi west to east.
+
+      One half of the state is forested and offers a unique panorama of wildlife.[citation needed] In the National Parks
+      of Kanha, Bandhavgarh, Shivpuri and many others visitors have the opportunity to see the tiger, the bison and a
+      wide variety of deer and antelope in natural surroundings.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Kundalpur_lake.jpg" ; alt="" width="800px"
+          height="600px">
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

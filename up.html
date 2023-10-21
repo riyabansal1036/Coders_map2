@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <title>UTTAR PRADESH</title>
+  <link rel="stylesheet" href="aa.css">
+</head>
+
+<body>
+
+
+  <h1>UTTAR PRADESH</h1>
+  <br>
+  <br>
+
+  <center>
+    <div class="img-slider" style="background-color: black;">
+      <div class="slide active">
+        <img
+          src="https://www.holidify.com/images/bgImages/UTTAR-PRADESH.jpg"
+         
+          
+          style="border:solid 10px yellow; border-radius: 5px;" alt="">
+        <div class="info">
+          <!-- <h2>Slide 01</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTstxM77f4JgBhQUEuBUJlhk9JSOV-wJCo53w&usqp=CAU" alt=""
+          style="border:solid 10px yellow; border-radius: 5px;" height="500px">
+        <div class="info">
+
+        </div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg0XpXWXgMHCHwuzRVm2Oasx9Bcb9lK122pg&usqp=CAU"
+          alt="" height="500px" style="border:solid 10px yellow; border-radius: 5px;">
+        <div class="info">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="navigation">
+      <div class="btn active"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+      <div class="btn"></div>
+    </div>
+    </div>
+  </center>
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function (manual) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function (activeClass) {
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function () {
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == i) {
+            i = 0;
+          }
+          if (i >= slides.length) {
+            return;
+          }
+          repeater();
+        }, 5000);
+      }
+      repeater();
+    }
+    repeat();
+  </script>
+  <br>
+  <br>
+  <hr>
+  <hr>
+  <br>
+  <div class="box1">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">About UTTAR PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+     
+      Uttar Pradesh is a state in northern India. With over 200 million inhabitants, it is the most populated state in India as well as the most populous country subdivision in the world.With over 200 million inhabitants, it is the most populated state in India as well as the most populous country subdivision in the world.[12] It was created on 1 April 1937 as the United Provinces of Agra and Oudh during British rule, and was renamed Uttar Pradesh in 1950, giving it the acronym UP. The state is divided into 18 divisions and 75 districts, with the state capital being Lucknow, and Allahabad serving as the judicial capital. On 9 November 2000, a new state, Uttaranchal (now Uttarakhand), was carved from the state's Himalayan hill region. The two major rivers of the state, the Ganges and Yamuna, join at Triveni Sangam in Allahabad and flow further east as Ganges. Other prominent rivers are Gomti and Saryu. 
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/A_Hindu_temple_Prem_Mandir_Love_temple_sights_culture_India.jpg/1280px-A_Hindu_temple_Prem_Mandir_Love_temple_sights_culture_India.jpg"
+          alt="" width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box2">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Geography Of
+      UTTAR PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Uttar Pradesh, with a total area of 243,290 square kilometres (93,935 sq mi), is India's fourth-largest state in terms of land area and is roughly of same size as United Kingdom. It is situated on the northern spout of India and shares an international boundary with Nepal. The Himalayas border the state on the north,[61] but the plains that cover most of the state are distinctly different from those high mountains.[62] The larger Gangetic Plain region is in the north; it includes the Ganges-Yamuna Doab, the Ghaghra plains, the Ganges plains and the Terai.[63] The smaller Vindhya Range and plateau region is in the south.[64] It is characterised by hard rock strata and a varied topography of hills, plains, valleys and plateaus. The Bhabhar tract gives place to the terai area which is covered with tall elephant grass and thick forests interspersed with marshes and swamps.
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Indo-Gangetic_Plain.jpg/1280px-Indo-Gangetic_Plain.jpg" alt="" width="800px"
+          height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box3">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Transport in
+      UTTAR PRADESH</h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      The state has the largest railway network in the country but in relative terms has only sixth-highest railway density despite its plain topography and largest population. As of 2011, there were 8,546 km (5,310 mi) of rail in the state.[224] Allahabad is the headquarters of the North Central Railway[225] and Gorakhpur is the headquarters of the North Eastern Railway.[226][227] Other than Zonal Headquarters of Allahabad and Gorakhpur, Lucknow and Moradabad serve as divisional Headquarters of the Northern Railway Division. Lucknow Swarna Shatabdi Express, the second fastest shatabdi train, connects the Indian capital of New Delhi to Lucknow while Kanpur Shatabdi Express, connects New Delhi to Kanpur. This was the first train in India to get the new German LHB coaches.[228] The railway stations of Allahabad Junction, Agra Cantt, Lucknow NR, Gorakhpur Junction, Kanpur Central, Mathura Junction and Varanasi Junction are included in the Indian Railways list of 50 world-class railway stations
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Vande_Bharat_exp.jpg" alt=""
+          width="800px" height="600px">
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <br>
+  <div class="box4">
+    <h2 style="font-size: 40px; text-align: center; text-decoration: underline; color: blue; ">Tourisim in PUNJAB
+    </h2>
+    <div class="content"
+      style="width: 90%; margin: auto; border-radius: 10px; font-size: 27px; font-family: cursive; border: solid 4px tomato; padding: 18px; ">
+      Uttar Pradesh ranks first in domestic tourist arrivals among all states of India with more than 71 million,[263][264] owing to its rich and varied topography, vibrant culture, festivals, monuments, ancient places of worship, and viharas. Uttar Pradesh is also home to three World Heritage Sites: the Taj Mahal, Agra Fort, and the nearby Fatehpur Sikri. Uttar Pradesh is a favoured tourist destination in India due to the location of Taj Mahal, nearly 69 lakhs (6.9 million) people visited the Taj Mahal in 2018–19, up 6% from the previous year when the number stood at 64 lakhs (6.4 million). The monument earned almost ₹78 crore (US$11 million) in ticket sales in 2018–19.[265] The state's tourism industry is a major contributor to the state's economy, growing at the rate of 21.60%.[266]
+
+      Religious tourism plays significant role in Uttar Pradesh tourism as the state has some of the holiest Hindu shrines. Varanasi a major religious hub, is the holiest of the seven sacred cities (Sapta Puri) in Hinduism and Jainism
+      <br><br>
+      <div class="content1">
+        <img style="border: solid 3px yellow; border-radius: 10px;"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kumbh_Mela_2013_Sangam%2C_Allahabd.jpg/1280px-Kumbh_Mela_2013_Sangam%2C_Allahabd.jpg" ; alt="" width="800px"
+          height="600px">
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
